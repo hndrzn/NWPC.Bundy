@@ -27,3 +27,60 @@ h1:focus {
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
+
+.bottom-border {
+    background: #50c878;
+    width: 100vw;
+    height: 16vh;
+    transform: skew(-20deg);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.second-bottom-border {
+    background: #32cd32;
+    width: 99vw;
+    height: 14vh;
+    transform: skew(-20deg);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.third-bottom-border {
+    background: #00a36c;
+    width: 98vw;
+    height: 12vh;
+    transform: skew(-20deg);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.rightmost-object {
+    background: #00a36c;
+    width: 50vw;
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.tv {
+    position: relative;
+    width: 68vw;
+    height: 64vh;
+    background: #00ff7f;
+    border-radius: 50% / 10%;
+    color: white;
+    opacity: 0.15;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    top: 0%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-indent: .1em;
+}
