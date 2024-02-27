@@ -115,10 +115,35 @@ h1:focus {
     z-index: -1;
 }
 
+.nwpc-banner {
+    position: fixed;
+    z-index: 3;
+    max-width: 100%; 
+    height: auto; 
+}
 
 .bundy-draft {
     position: absolute;
     z-index: 3;
-    max-width: 100%; 
-    height: auto; 
+    width: 25vw;
+    height: 30vh;
+    right: 10%;
+    top: 30%;
+    bottom: 50%;
+    left: 54%;
+    max-width: 100%;
+    height: auto;
+}
+
+.gif-test {
+    position: absolute;
+    z-index: 3;
+    width: 25vw;
+    height: 30vh;
+    right: 54%;
+    top: 30%;
+    bottom: 50%;
+    left: 25%;
+    max-width: 100%;
+    height: auto;
 }
