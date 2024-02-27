@@ -32,116 +32,92 @@ h1:focus {
     background: #b6e556;
     width: 100vw;
     height: 16vh;
-    transform: skew(-20deg);
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .second-bottom-border {
     background: #96ca2f;
     width: 99vw;
     height: 14vh;
-    transform: skew(-20deg);
     position: fixed;
     bottom: 0;
     right: 0;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .third-bottom-border {
     background: #82b710;
     width: 98vw;
     height: 12vh;
-    transform: skew(-20deg);
     position: fixed;
     bottom: 0;
     right: 0;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
-
-.rightmost-object {
-    background: #82b710;
-    width: 50vw;
-    height: 10vh;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
 
 .top-border {
     background: #b6e556;
-    width: 96vw;
+    width: 100vw;
     height: 16vh;
-    transform: skew(20deg);
     position: fixed;
     top: 0;
-    left: 2;
+    left: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
 }
 
 .second-top-border {
     background: #96ca2f;
-    width: 94vw;
+    width: 99vw;
     height: 14vh;
-    transform: skew(20deg);
     position: fixed;
     top: 0;
-    left: 2;
+    left: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
 }
 
 .third-top-border {
     background: #82b710;
-    width: 92vw;
-    height: 12vh;
-    transform: skew(20deg);
-    position: fixed;
-    top: 0;
-    left: 2;
-}
-
-.leftmost-object {
-    background: #82b710;
-    width: 2.5vw;
+    width: 98vw;
     height: 12vh;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
 }
 
-.leftmost-object-2 {
-    background: #96ca2f;
-    width: 2.5vw;
-    height: 14vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.leftmost-object-3 {
-    background: #b6e556;
-    width: 2.5vw;
-    height: 16vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
 .bundy-container {
-    background: #82b710;
-    width: 65vw;
+    background: #99e3f3;
+    width: 60vw;
     height: 60vh;
-    transform: skew(20deg);
-    opacity: 0.50;
     position: fixed;
     bottom: 50%;
     right: 50%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
-.nwpc-banner {
-    position: relative;
+.bundy-container-two {
+    background: #26b050;
+    width: 60vw;
+    height: 65vh;
+    opacity: 0.60;
+    position: fixed;
+    left: 48%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+.bundy-draft {
+    position: absolute;
     z-index: 3;
     max-width: 100%; 
     height: auto; 
