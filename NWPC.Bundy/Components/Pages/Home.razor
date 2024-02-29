@@ -1,20 +1,23 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 
 <PageTitle>NWPC Bundy Clock</PageTitle>
+
 
 <div class="background-container">
 
     <!-- NWPC Logo -->
     <img src="images/nwpc-logo-for-header.png" class="nwpc-banner" alt="NWPC Logo">
 
-    <img src="images/draft2.png" class="bundy-draft" alt="Bundy Draft">
-    <img src="images/money.gif" class="gif-test" alt="GIF Test">
+    <img src="images/draft4.png" class="bundy-draft" alt="Bundy Draft">
 
     <!-- Objects for Top part of the web app -->
     <div class="top-border"></div>
     <div class="second-top-border"></div>
     <div class="third-top-border"></div>
     <!-- End of Objects for Top part -->
+
+    <button class="btn btn-primary" @onclick="IncrementCount">Submit</button>
 
     <div class="bundy-container"></div>
     <div class="bundy-container-two"></div>
@@ -25,5 +28,32 @@
     <div class="third-bottom-border"></div>
     <!-- End of Objects for Bottom part -->
 
+    <div class="numpad-container">
+        <div class="numpad">
+            <button class="digit">1</button>
+            <button class="digit">2</button>
+            <button class="digit">3</button>
+            <button class="digit">4</button>
+            <button class="digit">5</button>
+            <button class="digit">6</button>
+            <button class="digit">7</button>
+            <button class="digit">8</button>
+            <button class="digit">9</button>
+            <button class="digit">Del</button>
+            <button class="digit">0</button>
+            <button class="digit">abc</button>
+
+        </div>
+    </div>
+
 </div>
 
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
