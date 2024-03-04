@@ -3,7 +3,6 @@
 
 <PageTitle>NWPC Bundy Clock</PageTitle>
 
-
 <div class="background-container">
 
     <!-- NWPC Logo -->
@@ -16,8 +15,6 @@
     <div class="second-top-border"></div>
     <div class="third-top-border"></div>
     <!-- End of Objects for Top part -->
-
-    <button class="btn btn-primary" @onclick="IncrementCount">Submit</button>
 
     <div class="bundy-container"></div>
     <div class="bundy-container-two"></div>
@@ -46,14 +43,20 @@
         </div>
     </div>
 
+    <div class="forms-container">
+        <fieldset class="fieldset-forms">
+            <legend style="font-family: sans-serif">Select a Bundy type:</legend>
+        </fieldset>
+        <div class="input-container ic1">
+            <input id="IDnumber" class="input" type="text" placeholder=" " />
+            <div class="cut"></div>
+            <label for="IDnumber" class="placeholder">ID Number</label>
+        </div>
+        <button type="text" class="submit">Submit</button>
 </div>
 
+</div>
 
 @code {
-    private int currentCount = 0;
 
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
 }
