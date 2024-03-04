@@ -8,8 +8,6 @@
     <!-- NWPC Logo -->
     <img src="images/nwpc-logo-for-header.png" class="nwpc-banner" alt="NWPC Logo">
 
-    <img src="images/draft4.png" class="bundy-draft" alt="Bundy Draft">ggg88
-
     <!-- Objects for Top part of the web app -->
     <div class="top-border"></div>
     <div class="second-top-border"></div>
@@ -43,14 +41,37 @@
         </div>
     </div>
 
+    <div class="current-date-time" id="currentDateTime"></div>
+
+    <!-- JavaScript code to continuously update date and time -->
+    <script>
+        // Get the current date and time and update the displayed time
+        function updateDateTime() {
+            var currentDate = new Date();
+            var dateString = currentDate.toLocaleDateString();
+            var timeString = currentDate.toLocaleTimeString();
+            var dateTimeString = dateString + ' ' + timeString;
+
+            // Display the current date and time
+            document.getElementById('currentDateTime').innerText = dateTimeString;
+        }
+
+        // Update the displayed time every second
+        setInterval(updateDateTime, 1000);
+
+        // Call the function once immediately to display the initial time
+        updateDateTime();
+    </script>
+
+    <!-- Forms for Bundy Selection and ID -->
     <div class="forms-container">
         <fieldset class="fieldset-forms">
-            <legend style="font-family: sans-serif">Select a Bundy type:</legend>
+            <legend style="color: #65657b; font-family: Arial, sans-serif;">Select Bundy Type:</legend>
         </fieldset>
         <div class="input-container ic1">
-            <input id="IDnumber" class="input" type="text" placeholder=" " />
+            <input id="employeeID" class="input" type="text" placeholder=" " />
             <div class="cut"></div>
-            <label for="IDnumber" class="placeholder">ID Number</label>
+            <label for="employeeID" class="placeholder">Employee ID</label>
         </div>
         <button type="text" class="submit">Submit</button>
     </div>
@@ -58,5 +79,6 @@
 </div>
 
 @code {
+
 
 }
