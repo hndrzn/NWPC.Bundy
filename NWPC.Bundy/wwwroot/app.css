@@ -132,9 +132,9 @@ h1:focus {
     background-color: #ffffff;
     border-radius: 10px;
     position: fixed;
-    top: 35%;
+    top: 33%;
     left: 58%;
-    right: 40%;
+    right: 50%;
     bottom: 40%;
     z-index: 5;
     width: 183px;
@@ -144,24 +144,53 @@ h1:focus {
 .numpad {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    width: 30px;
+    gap: 10px;
     padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
 }
 
 .digit {
     width: 50px;
     height: 50px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 10px;
-    background-color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.5); 
+    color: #000; 
     font-size: 20px;
     cursor: pointer;
-    margin: 2px; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset; 
 }
 
 .digit:hover {
-    background-color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.7); 
 }
+
+.digit:active {
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.digit.dum {
+    background-color: white; 
+    color: white;
+    border: none; 
+    pointer-events: none;
+}
+
+.digit.del {
+    background-color: rgba(255, 0, 0, 0.5); /
+}
+
+.digit.del:hover {
+    background-color: rgba(255, 0, 0, 0.7); 
+}
+
+.digit.del:active {
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
 
 .forms-container {
     position: fixed;
@@ -286,4 +315,25 @@ h1:focus {
     z-index: 20; 
     color: #000000;
     font-size: 25px; 
+}
+
+.current-time {
+   position: fixed;
+   z-index: inherit;
+   font-family: Roboto;
+   left: 152px;
+   right: 0px;
+   top: 0px;
+   bottom: 0px;
+   font-size: 40px;
+}
+
+.current-day-date {
+    position: fixed;
+    z-index: inherit;
+    left: 170px;
+    top: 71px;
+    bottom: 0px;
+    font-size: 15px;
+    font-family: Roboto;
 }
