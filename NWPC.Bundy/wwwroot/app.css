@@ -129,7 +129,7 @@ h1:focus {
 }
 
 .numpad-container {
-    background-color: #b6e556;
+    background-color: #ffffff;
     border-radius: 10px;
     position: fixed;
     top: 35%;
@@ -152,7 +152,7 @@ h1:focus {
     width: 50px;
     height: 50px;
     border: 1px solid #ccc;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: #f0f0f0;
     font-size: 20px;
     cursor: pointer;
@@ -281,9 +281,9 @@ h1:focus {
 
 .current-date-time {
     position: fixed;
-    top: 180px; 
-    left: 390px; 
+    top: 30px; 
+    left: 70px; 
     z-index: 20; 
     color: #000000;
-    font-size: 16px; 
+    font-size: 25px; 
 }

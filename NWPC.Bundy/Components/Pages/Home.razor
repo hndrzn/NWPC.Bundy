@@ -9,12 +9,19 @@
     <img src="images/nwpc-logo-for-header.png" class="nwpc-banner" alt="NWPC Logo">
 
     <!-- Objects for Top part of the web app -->
-    <div class="top-border"></div>
+    <div class="top-border">
+    </div>
     <div class="second-top-border"></div>
     <div class="third-top-border"></div>
     <!-- End of Objects for Top part -->
 
-    <div class="bundy-container"></div>
+    <div class="bundy-container">
+        <div class="current-date-time">
+            <p class="current-time" id="current-time"></p>
+            <p class="current-day-date" id="current-day-date"></p>
+        </div>
+    </div>
+
     <div class="bundy-container-two"></div>
 
     <!-- Objects for Bottom part of the web app -->
@@ -34,34 +41,11 @@
             <button class="digit">7</button>
             <button class="digit">8</button>
             <button class="digit">9</button>
-            <button class="digit">Del</button>
+            <button class="digit dum"></button>
             <button class="digit">0</button>
-            <button class="digit">abc</button>
-
+            <button class="digit del">&#9003</button>
         </div>
     </div>
-
-    <div class="current-date-time" id="currentDateTime"></div>
-
-    <!-- JavaScript code to continuously update date and time -->
-    <script>
-        // Get the current date and time and update the displayed time
-        function updateDateTime() {
-            var currentDate = new Date();
-            var dateString = currentDate.toLocaleDateString();
-            var timeString = currentDate.toLocaleTimeString();
-            var dateTimeString = dateString + ' ' + timeString;
-
-            // Display the current date and time
-            document.getElementById('currentDateTime').innerText = dateTimeString;
-        }
-
-        // Update the displayed time every second
-        setInterval(updateDateTime, 1000);
-
-        // Call the function once immediately to display the initial time
-        updateDateTime();
-    </script>
 
     <!-- Forms for Bundy Selection and ID -->
     <div class="forms-container">
@@ -79,6 +63,39 @@
 </div>
 
 @code {
+    private DateTime CurrentDateTime { get; set; }
 
+    protected override async Task OnInitializedAsync()
+    {
+        CurrentDateTime = DateTime.UtcNow.AddHours(8); // Set initial time
 
+        // Update the time every second
+        var timer = new System.Threading.Timer(async _ =>
+        {
+            CurrentDateTime = DateTime.UtcNow.AddHours(8);
+            await InvokeAsync(StateHasChanged); // Notify Blazor that the state has changed
+        }, null, TimeSpan.Zero, TimeSpan.FromSeconds(1));
+    }
 }
+
+<script>
+    function updateTime() {
+        var now = new Date();
+        var timeString = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', second: '2-digit' });
+        var dayString = now.toLocaleDateString('en-US', { weekday: 'long' });
+        var dateString = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+        // Concatenate day and date strings
+        var dayDate = dayString + ", " + dateString;
+
+        document.getElementById('current-time').textContent = timeString;
+        document.getElementById('current-day-date').textContent = dayDate;
+    }
+
+    // Call updateTime function every second to update the time dynamically
+    setInterval(updateTime, 1000);
+
+    // Initial call to display time immediately
+    updateTime();
+</script>
+
