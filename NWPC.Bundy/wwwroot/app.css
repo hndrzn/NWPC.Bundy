@@ -31,6 +31,13 @@ h1:focus {
     border-color: #929292;
 }
 
+.nwpc-banner {
+    position: fixed;
+    z-index: 3;
+    max-width: 50vw;
+    height: auto;
+}
+
 .bottom-border {
     background: #b6e556;
     width: 100vw;
@@ -121,13 +128,6 @@ h1:focus {
     z-index: -1;
 }
 
-.nwpc-banner {
-    position: fixed;
-    z-index: 3;
-    max-width: 100%; 
-    height: auto; 
-}
-
 .numpad-container {
     background-color: #ffffff;
     border-radius: 10px;
@@ -172,13 +172,6 @@ h1:focus {
     background-color: rgba(0, 0, 0, 0.3); 
 }
 
-.digit.dum {
-    background-color: white; 
-    color: white;
-    border: none; 
-    pointer-events: none;
-}
-
 .digit.del {
     background-color: rgba(255, 0, 0, 0.5); /
 }
@@ -189,6 +182,122 @@ h1:focus {
 
 .digit.del:active {
     background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.digit.dum {
+    background-color: white; /* Set background color to white */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    pointer-events: none; /* Disable pointer events so the button is not clickable */
+}
+
+.switch-key {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.5); /* Blue background color */
+    color: #fff; /* White text color */
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue glowing effect */
+}
+
+.switch-key:hover {
+    background-color: rgba(0, 0, 255, 0.7); /* Darker blue on hover */
+}
+
+.switch-key:active {
+    background-color: rgba(0, 0, 255, 0.3); /* Lighter blue on active */
+}
+
+.keypad-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: fixed;
+    top: 40%;
+    left: 52%;
+    right: 10%;
+    bottom: 10%;
+    z-index: 5;
+    height: 130px;
+    width: 348px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);    
+}
+
+.keypad-letter {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    color: #000; 
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset; 
+    margin-bottom: 5px;
+    margin-right: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+.keypad-letter:hover {
+    background-color: rgba(255, 255, 255, 0.7); 
+}
+
+.keypad-letter:active {
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.keypad-letter.del {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.keypad-letter.del:hover {
+    background-color: rgba(255, 0, 0, 0.7); 
+}
+
+.keypad-letter.del:active {
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.keypad-letter.dum {
+    background-color: white; 
+    color: white; 
+    border: none; 
+    pointer-events: none; 
+}
+
+.switch-key-abc {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.5); /* Blue background color */
+    color: #fff; /* White text color */
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue glowing effect */
+}
+
+.switch-key-abc:hover {
+    background-color: rgba(0, 0, 255, 0.7); /* Darker blue on hover */
+}
+
+.switch-key-abc:active {
+    background-color: rgba(0, 0, 255, 0.3); /* Lighter blue on active */
 }
 
 
@@ -337,4 +446,250 @@ h1:focus {
     bottom: 0px;
     font-size: 15px;
     font-family: Roboto;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for screens smaller than 600px (typical mobile devices) */
+    .nwpc-banner {
+        max-width: 80%; 
+    }
+
+    .top-border {
+        max-height: 10%;
+    }
+
+    .second-top-border {
+        max-height: 8%;
+    }
+
+    .third-top-border {
+        max-height: 6%;
+    }
+
+    .bottom-border {
+        max-height: 10%;
+    }
+
+    .second-bottom-border {
+        max-height: 8%;
+    }
+
+    .third-bottom-border {
+        max-height: 6%;
+    }
+
+    .bundy-container {
+        width: 75%; 
+        height: 60vh; 
+    }
+
+    .bundy-container-two {
+        width: 80%;
+        height: 62vh; 
+    }
+
+    .forms-container {
+        width: 60%; 
+        max-height: 5%;
+        padding: 10px; 
+        top: 31%; 
+        left: 20%; 
+    }
+
+    .current-time {
+        font-size: 30px;
+        left: 23%;
+        right: 15%;
+
+    }
+    .current-day-date {
+        font-size: 15px;
+        top: 12%;
+        bottom: 80%;
+        left: 21%;
+    }
+
+    .numpad-container {
+        max-width: 100%;
+        max-height: 15%;
+        left: 16.5%;
+        top: 69%;
+    }
+
+    .digit {
+        font-size: 13px;
+        max-width: 32px;
+        max-height: 32px;
+    }
+
+    .numpad {
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .numpad button.switch-key {
+        grid-column: 5; 
+    }
+
+    .numpad button.digit:nth-child(11) {
+        grid-column: 4; 
+        grid-row: 2;
+    }
+
+    .numpad button.digit.del {
+        grid-column: 6;
+    }
+
+    .switch-key {
+        font-size: 13px;
+        max-width: 32px;
+        max-height: 32px;
+    }
+
+    .digit-del {
+        font-size: 13px;
+        max-width: 32px;
+        max-height: 32px;
+    }
+
+    .keypad-container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        position: fixed;
+        top: 69%;
+        left: 17%;
+        z-index: 5;
+        height: 12%;
+        width: 65%;
+    }
+
+    .keypad-letter {
+        width: 20px;
+        height: 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #000;
+        font-size: 13px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset;
+        margin-bottom: 5px;
+        margin-right: 2px;
+    }
+
+    .switch-key-abc {
+        font-size: 8px;
+        max-width: 25px;
+        max-height: 25px;
+    }
+
+    .keypad-letter.del {
+        font-size: 11px;
+        border-radius: 10px;
+        height: 25px;
+        width: 25px;
+    }
+
+    .hidden {
+        display: none;
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 1300px) and (orientation: landscape) {
+    /* Adjust styles for screens smaller than 600px (typical mobile devices) */
+    .nwpc-banner {
+        max-width: 30%; /* Adjust the maximum width of the banner for smaller screens */
+    }
+
+    .top-border {
+        max-height: 14%;
+    }
+
+    .second-top-border {
+        max-height: 12%;
+    }
+
+    .third-top-border {
+        max-height: 10%;
+    }
+
+    .bottom-border {
+        max-height: 14%;
+    }
+
+    .second-bottom-border {
+        max-height: 12%;
+    }
+
+    .third-bottom-border {
+        max-height: 10%;
+    }
+
+    .bundy-container {
+        width: 60%;
+        height: 49vh;
+        border: 4px solid;
+        border-color: #4cbb17;
+    }
+
+    .bundy-container-two {
+        width: 60%;
+        height: 54vh;
+    }
+
+    .forms-container {
+        width: 20%;
+        max-height: 25%;
+        padding: 10px;
+        top: 31%;
+        left: 20%;
+    }
+
+    .current-time {
+        font-size: 20px;
+        left: 23%;
+        right: 15%;
+    }
+
+    .current-day-date {
+        font-size: 15px;
+        top: 12%;
+        bottom: 80%;
+        left: 21%;
+    }
+
+    .numpad-container {
+        max-width: 27%;
+        max-height: 15%;
+        left: 25%;
+        top: 60%;
+    }
+
+    .digit {
+        font-size: 13px;
+        max-width: 32px;
+        max-height: 32px;
+    }
+
+    .switch-key {
+        font-size: 13px;
+        max-width: 32px;
+        max-height: 32px;
+    }
+
+    .digit-del {
+        font-size: 13px;
+        max-width: 32px;
+        max-height: 32px;
+    }
+
 }

@@ -1,6 +1,8 @@
 ﻿@page "/"
 @rendermode InteractiveServer
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <PageTitle>NWPC Bundy Clock</PageTitle>
 
 <div class="background-container">
@@ -41,9 +43,45 @@
             <button class="digit" onclick="updateInput('7')">7</button>
             <button class="digit" onclick="updateInput('8')">8</button>
             <button class="digit" onclick="updateInput('9')">9</button>
-            <button class="digit dum"></button>
+            <button class="switch-key" onclick="toggleKeypad()">abc</button>
             <button class="digit" onclick="updateInput('0')">0</button>
             <button class="digit del" onclick="deleteLast()">&#9003;</button>
+        </div>
+    </div>
+
+    <div class="letter-keypad-container hidden" id="letterKeypad">
+        <div class="keypad-container">
+            <div class="keypad">
+                <button class="keypad-letter" onclick="updateInput('q')">q</button>
+                <button class="keypad-letter" onclick="updateInput('w')">w</button>
+                <button class="keypad-letter" onclick="updateInput('e')">e</button>
+                <button class="keypad-letter" onclick="updateInput('r')">r</button>
+                <button class="keypad-letter" onclick="updateInput('t')">t</button>
+                <button class="keypad-letter" onclick="updateInput('y')">y</button>
+                <button class="keypad-letter" onclick="updateInput('u')">u</button>
+                <button class="keypad-letter" onclick="updateInput('i')">i</button>
+                <button class="keypad-letter" onclick="updateInput('o')">o</button>
+                <button class="keypad-letter" onclick="updateInput('p')">p</button>
+                <button class="keypad-letter" onclick="updateInput('a')">a</button>
+                <button class="keypad-letter" onclick="updateInput('s')">s</button>
+                <button class="keypad-letter" onclick="updateInput('d')">d</button>
+                <button class="keypad-letter" onclick="updateInput('f')">f</button>
+                <button class="keypad-letter" onclick="updateInput('g')">g</button>
+                <button class="keypad-letter" onclick="updateInput('h')">h</button>
+                <button class="keypad-letter" onclick="updateInput('j')">j</button>
+                <button class="keypad-letter" onclick="updateInput('k')">k</button>
+                <button class="keypad-letter" onclick="updateInput('l')">l</button>
+                <button class="keypad-letter dum"></button>
+                <button class="switch-key-abc" onclick="toggleKeypad()">123</button>
+                <button class="keypad-letter" onclick="updateInput('z')">z</button>
+                <button class="keypad-letter" onclick="updateInput('x')">x</button>
+                <button class="keypad-letter" onclick="updateInput('c')">c</button>
+                <button class="keypad-letter" onclick="updateInput('v')">v</button>
+                <button class="keypad-letter" onclick="updateInput('b')">b</button>
+                <button class="keypad-letter" onclick="updateInput('n')">n</button>
+                <button class="keypad-letter" onclick="updateInput('m')">m</button>
+                <button class="keypad-letter del" onclick="deleteLast()">&#9003;</button>
+            </div>
         </div>
     </div>
 
@@ -106,4 +144,24 @@
         var input = document.getElementById('employeeID');
         input.value = input.value.slice(0, -1);
     }
+
+    function appendToInput(value) {
+        document.getElementById('employeeID').value += value;
+    }
+
+    function toggleKeypad() {
+        var numpad = document.querySelector('.numpad-container');
+        var letterKeypad = document.querySelector('.letter-keypad-container');
+
+        if (numpad.classList.contains('hidden')) {
+            // Switching from letter keypad to numpad
+            numpad.classList.remove('hidden');
+            letterKeypad.classList.add('hidden');
+        } else {
+            // Switching from numpad to letter keypad
+            numpad.classList.add('hidden');
+            letterKeypad.classList.remove('hidden');
+        }
+    }
+
 </script>
