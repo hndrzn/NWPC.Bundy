@@ -227,6 +227,7 @@ h1:focus {
     font-size: 18px;
     height: 100%;
     width: 100%;
+    padding-left: 15px;
 }
 
 .input:focus {

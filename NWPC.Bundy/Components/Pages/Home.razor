@@ -32,18 +32,18 @@
 
     <div class="numpad-container">
         <div class="numpad">
-            <button class="digit">1</button>
-            <button class="digit">2</button>
-            <button class="digit">3</button>
-            <button class="digit">4</button>
-            <button class="digit">5</button>
-            <button class="digit">6</button>
-            <button class="digit">7</button>
-            <button class="digit">8</button>
-            <button class="digit">9</button>
+            <button class="digit" onclick="updateInput('1')">1</button>
+            <button class="digit" onclick="updateInput('2')">2</button>
+            <button class="digit" onclick="updateInput('3')">3</button>
+            <button class="digit" onclick="updateInput('4')">4</button>
+            <button class="digit" onclick="updateInput('5')">5</button>
+            <button class="digit" onclick="updateInput('6')">6</button>
+            <button class="digit" onclick="updateInput('7')">7</button>
+            <button class="digit" onclick="updateInput('8')">8</button>
+            <button class="digit" onclick="updateInput('9')">9</button>
             <button class="digit dum"></button>
-            <button class="digit">0</button>
-            <button class="digit del">&#9003</button>
+            <button class="digit" onclick="updateInput('0')">0</button>
+            <button class="digit del" onclick="deleteLast()">&#9003;</button>
         </div>
     </div>
 
@@ -53,7 +53,7 @@
             <legend style="color: #65657b; font-family: Arial, sans-serif;">Select Bundy Type:</legend>
         </fieldset>
         <div class="input-container ic1">
-            <input id="employeeID" class="input" type="text" placeholder=" " />
+            <input id="employeeID" class="input" type="text" placeholder=" " disabled />
             <div class="cut"></div>
             <label for="employeeID" class="placeholder">Employee ID</label>
         </div>
@@ -97,5 +97,13 @@
 
     // Initial call to display time immediately
     updateTime();
-</script>
 
+    function updateInput(value) {
+        document.getElementById('employeeID').value += value;
+    }
+
+    function deleteLast() {
+        var input = document.getElementById('employeeID');
+        input.value = input.value.slice(0, -1);
+    }
+</script>
