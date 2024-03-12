@@ -185,10 +185,10 @@ h1:focus {
 }
 
 .digit.dum {
-    background-color: white; /* Set background color to white */
-    color: white; /* Set text color to white */
-    border: none; /* Remove border */
-    pointer-events: none; /* Disable pointer events so the button is not clickable */
+    background-color: white; 
+    color: white; 
+    border: none; 
+    pointer-events: none; 
 }
 
 .switch-key {
@@ -196,20 +196,20 @@ h1:focus {
     height: 50px;
     border: none;
     border-radius: 10px;
-    background-color: rgba(0, 0, 255, 0.5); /* Blue background color */
-    color: #fff; /* White text color */
+    background-color: rgba(0, 0, 255, 0.5);
+    color: #fff;
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue glowing effect */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);d
 }
 
 .switch-key:hover {
-    background-color: rgba(0, 0, 255, 0.7); /* Darker blue on hover */
+    background-color: rgba(0, 0, 255, 0.7); 
 }
 
 .switch-key:active {
-    background-color: rgba(0, 0, 255, 0.3); /* Lighter blue on active */
+    background-color: rgba(0, 0, 255, 0.3); 
 }
 
 .keypad-container {
@@ -284,22 +284,21 @@ h1:focus {
     height: 30px;
     border: none;
     border-radius: 10px;
-    background-color: rgba(0, 0, 255, 0.5); /* Blue background color */
-    color: #fff; /* White text color */
+    background-color: rgba(0, 0, 255, 0.5); 
+    color: #fff;
     font-size: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue glowing effect */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); 
 }
 
 .switch-key-abc:hover {
-    background-color: rgba(0, 0, 255, 0.7); /* Darker blue on hover */
+    background-color: rgba(0, 0, 255, 0.7); 
 }
 
 .switch-key-abc:active {
-    background-color: rgba(0, 0, 255, 0.3); /* Lighter blue on active */
+    background-color: rgba(0, 0, 255, 0.3); 
 }
-
 
 .forms-container {
     position: fixed;
@@ -317,6 +316,7 @@ h1:focus {
 }
 
 .input-container {
+    bottom: 17%;
     height: 50px;
     position: relative;
     width: 100%;
@@ -398,8 +398,8 @@ h1:focus {
     color: #eee;
     cursor: pointer;
     font-size: 18px;
-    height: 50px;
-    margin-top: 38px;
+    height: 40px;
+    margin-top: 25px;
     text-align: center;
     width: 100%;
     z-index: inherit;
@@ -416,7 +416,60 @@ h1:focus {
     border-radius: 15px;
     border-color: #65657b;
     outline: 0;
+    max-width: 100%;
+    padding-top: 0%;
+    padding-left: 11%;
+    padding-bottom: 7%;
 }
+
+.time-in,
+.lunch-in {
+    height: 30px;
+    max-width: 45%;
+    background-color: #82b710;
+    border-radius: 18px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 18px;
+    text-align: center;
+    width: 100%;
+    z-index: inherit;
+    border-radius: 25px;
+}
+
+.time-in:active,
+.lunch-in:active{
+    background-color: #4c7f0e;
+    box-shadow: 0 0 10px 0 #3a5d09;
+}
+
+.time-out,
+.lunch-out {
+    height: 30px;
+    max-width: 45%;
+    background-color: #D22B2B;
+    border-radius: 18px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+    z-index: inherit;
+    border-radius: 25px;
+}
+
+.time-out:active,
+.lunch-out:active {
+    background-color: #ff4d4d;
+    box-shadow: 0 0 10px 0 #ff4d4d;
+}
+
 
 .current-date-time {
     position: fixed;
