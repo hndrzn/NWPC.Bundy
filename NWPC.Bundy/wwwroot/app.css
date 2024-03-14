@@ -134,14 +134,45 @@ h1:focus {
     z-index: -1;
 }
 
+.current-date-time {
+    position: fixed;
+    top: 30px;
+    left: 90px;
+    z-index: 15;
+    color: #000000;
+    font-size: 25px;
+    user-select: none;
+}
+
+.current-time {
+    position: fixed;
+    z-index: inherit;
+    font-family: Roboto;
+    top: 0.01%;
+    left: 20.5%;
+    font-size: 40px;
+    user-select: none;
+}
+
+.current-day-date {
+    position: fixed;
+    z-index: inherit;
+    left: 21.99%;
+    top: 18%;
+    bottom: 0px;
+    font-size: 15px;
+    font-family: Roboto;
+    user-select: none;
+}
+
 /* Rounded rectangle container for numpad */
 .numpad-container {
     background-color: #ffffff;
     border-radius: 10px;
     position: fixed;
-    top: 33%;
-    left: 58%;
-    right: 50%;
+    top: 22%;
+    left: 65%;
+    right: 90%;
     bottom: 40%;
     z-index: 5;
     width: 183px;
@@ -224,11 +255,9 @@ h1:focus {
     background-color: #ffffff;
     border-radius: 10px;
     position: fixed;
-    top: 45%;
-    left: 52%;
-    right: 10%;
-    bottom: 20%;
-    z-index: 5;
+    top: 40%;
+    left: 54%;
+    z-index: inherit;
     height: 20%;
     width: 348px;
 }
@@ -310,17 +339,15 @@ h1:focus {
 
 .forms-container {
     position: fixed;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 20vh;
+    height: 20.5vh;
     padding: 20px;
-    max-width: 25%;
-    top: 35%;
-    left: 26%;
-    right: 10%;
-    bottom: 90%;
-    z-index: 10;
+    max-width: 40%;
+    top: 25.5%;
+    left: 11%;
+    z-index: 40;
 }
 
 .input-container {
@@ -332,7 +359,7 @@ h1:focus {
 }
 
 .ic1 {
-    margin-top: 40px;
+    margin-top: 7%;
     z-index: inherit;
 }
 
@@ -476,37 +503,6 @@ h1:focus {
 .lunch-out:active {
     background-color: #ff4d4d;
     box-shadow: 0 0 10px 0 #ff4d4d;
-}
-
-
-.current-date-time {
-    position: fixed;
-    top: 30px; 
-    left: 90px; 
-    z-index: 20; 
-    color: #000000;
-    font-size: 25px; 
-}
-
-.current-time {
-   position: fixed;
-   z-index: inherit;
-   font-family: Roboto;
-   left: 160px;
-   right: 0px;
-   top: 0px;
-   bottom: 0px;
-   font-size: 40px;
-}
-
-.current-day-date {
-    position: fixed;
-    z-index: inherit;
-    left: 178px;
-    top: 71px;
-    bottom: 0px;
-    font-size: 15px;
-    font-family: Roboto;
 }
 
 @media only screen and (max-width: 600px) {

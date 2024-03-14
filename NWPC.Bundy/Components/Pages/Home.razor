@@ -1,21 +1,25 @@
 ﻿@page "/"
 @rendermode InteractiveServer
 
+<html>
+
+<head>
+    <script src="Scripts/dateAndTime.js"></script>
+    <script src="Scripts/keypadFunctions.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NWPC Bundy Clock</title>
+</head>
 
-<PageTitle>NWPC Bundy Clock</PageTitle>
-
+<body>
 <div class="background-container">
-
     <!-- NWPC Logo -->
     <img src="images/nwpc-logo-for-header.png" class="nwpc-banner" alt="NWPC Logo">
 
     <!-- Objects for Top part of the web app -->
-    <div class="top-border">
-    </div>
+        <div class="top-border"></div>
     <div class="second-top-border"></div>
     <div class="third-top-border"></div>
-    <!-- End of Objects for Top part -->
+        <!-- End of Objects for top part -->
 
     <div class="bundy-container">
         <div class="current-date-time">
@@ -94,46 +98,21 @@
             <button type="text" class="lunch-in">Lunch In</button>
             <button type="text" class="lunch-out">Lunch Out</button>
         </fieldset>
+
+            <!-- LINK FOR AUTOCOMPLETE FUNCTION -->
+            <form autocomplete="on">
         <div class="input-container ic1">
-            <input id="employeeID" class="input" type="text" placeholder=" " disabled />
+                    <input id="employeeID" class="input" type="text" placeholder=" " autocomplete="on" disabled />
             <div class="cut"></div>
             <label for="employeeID" class="placeholder">Employee ID</label>
-
+                </div>
+            </form>
             <button type="text" class="submit">Submit</button>
         </div>
-    </div>
 
 </div>
 
-@code {
-    private DateTime CurrentDateTime { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-        CurrentDateTime = DateTime.UtcNow.AddHours(8); // Set initial time
-
-        // Update the time every second
-        var timer = new System.Threading.Timer(async _ =>
-        {
-            CurrentDateTime = DateTime.UtcNow.AddHours(8);
-            await InvokeAsync(StateHasChanged); // Notify Blazor that the state has changed
-        }, null, TimeSpan.Zero, TimeSpan.FromSeconds(1));
-    }
-}
-
 <script>
-    function updateTime() {
-        var now = new Date();
-        var timeString = now.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', second: '2-digit' });
-        var dayString = now.toLocaleDateString('en-US', { weekday: 'long' });
-        var dateString = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-
-        // Concatenate day and date strings
-        var dayDate = dayString + ", " + dateString;
-
-        document.getElementById('current-time').textContent = timeString;
-        document.getElementById('current-day-date').textContent = dayDate;
-    }
 
     // Call updateTime function every second to update the time dynamically
     setInterval(updateTime, 1000);
@@ -158,15 +137,5 @@
         var numpad = document.querySelector('.numpad-container');
         var letterKeypad = document.querySelector('.letter-keypad-container');
 
-        if (numpad.classList.contains('hidden')) {
-            // Switching from letter keypad to numpad
-            numpad.classList.remove('hidden');
-            letterKeypad.classList.add('hidden');
-        } else {
-            // Switching from numpad to letter keypad
-            numpad.classList.add('hidden');
-            letterKeypad.classList.remove('hidden');
-        }
     }
 
-</script>
