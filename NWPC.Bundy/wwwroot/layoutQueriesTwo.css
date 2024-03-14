@@ -1,0 +1,23 @@
+﻿/* iPad Pro 12 (2021) Media Query for portrait orientation */
+
+@media only screen and (min-width: 1366px) and (orientation: portrait) {
+    .nwpc-banner {
+        max-width: 80%;
+    }
+
+    .top-border {
+        max-height: 10%;
+    }
+
+    .second-top-border {
+        max-height: 8%;
+    }
+
+    .third-top-border {
+        max-height: 6%;
+    }
+
+    .bottom-border {
+        max-height: 10%;
+    }
+}

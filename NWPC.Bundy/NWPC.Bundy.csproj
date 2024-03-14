@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Scripts\dateAndTime.js" />
+    <None Include="wwwroot\Scripts\fetchData.js" />
+    <None Include="wwwroot\Scripts\keypadFunctions.js" />
+  </ItemGroup>
+
 </Project>

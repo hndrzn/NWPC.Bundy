@@ -6,136 +6,139 @@
 <head>
     <script src="Scripts/dateAndTime.js"></script>
     <script src="Scripts/keypadFunctions.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NWPC Bundy Clock</title>
 </head>
 
 <body>
-<div class="background-container">
-    <!-- NWPC Logo -->
-    <img src="images/nwpc-logo-for-header.png" class="nwpc-banner" alt="NWPC Logo">
+    <div class="background-container">
+        <!-- NWPC Logo -->
+        <img src="images/nwpc-logo-for-header.png" class="nwpc-banner" alt="NWPC Logo">
 
-    <!-- Objects for Top part of the web app -->
+        <!-- Objects for Top part of the web app -->
         <div class="top-border"></div>
-    <div class="second-top-border"></div>
-    <div class="third-top-border"></div>
+        <div class="second-top-border"></div>
+        <div class="third-top-border"></div>
         <!-- End of Objects for top part -->
 
-    <div class="bundy-container">
-        <div class="current-date-time">
-            <p class="current-time" id="current-time"></p>
-            <p class="current-day-date" id="current-day-date"></p>
-        </div>
-    </div>
+        <!-- Objects for Bottom part of the web app -->
+        <div class="bottom-border"></div>
+        <div class="second-bottom-border"></div>
+        <div class="third-bottom-border"></div>
+        <!-- End of Objects for Bottom part -->
 
-    <div class="bundy-container-two"></div>
 
-    <!-- Objects for Bottom part of the web app -->
-    <div class="bottom-border"></div>
-    <div class="second-bottom-border"></div>
-    <div class="third-bottom-border"></div>
-    <!-- End of Objects for Bottom part -->
+        <!-- White Rounded Rectangle Container for Elements -->
+        <div class="bundy-container">
+            <div class="current-date-time">
+                <p class="current-time" id="current-time"></p>
+                <p class="current-day-date" id="current-day-date"></p>
+            </div>
 
-    <div class="numpad-container">
-        <div class="numpad">
-            <button class="digit" onclick="updateInput('1')">1</button>
-            <button class="digit" onclick="updateInput('2')">2</button>
-            <button class="digit" onclick="updateInput('3')">3</button>
-            <button class="digit" onclick="updateInput('4')">4</button>
-            <button class="digit" onclick="updateInput('5')">5</button>
-            <button class="digit" onclick="updateInput('6')">6</button>
-            <button class="digit" onclick="updateInput('7')">7</button>
-            <button class="digit" onclick="updateInput('8')">8</button>
-            <button class="digit" onclick="updateInput('9')">9</button>
-            <button class="switch-key" onclick="toggleKeypad()">abc</button>
-            <button class="digit" onclick="updateInput('0')">0</button>
-            <button class="digit del" onclick="deleteLast()">&#9003;</button>
-        </div>
-    </div>
+            <div class="numpad-container">
+                <div class="numpad">
+                    <button class="digit" onclick="updateInput('1')">1</button>
+                    <button class="digit" onclick="updateInput('2')">2</button>
+                    <button class="digit" onclick="updateInput('3')">3</button>
+                    <button class="digit" onclick="updateInput('4')">4</button>
+                    <button class="digit" onclick="updateInput('5')">5</button>
+                    <button class="digit" onclick="updateInput('6')">6</button>
+                    <button class="digit" onclick="updateInput('7')">7</button>
+                    <button class="digit" onclick="updateInput('8')">8</button>
+                    <button class="digit" onclick="updateInput('9')">9</button>
+                    <button class="switch-key" onclick="toggleKeypad()">abc</button>
+                    <button class="digit" onclick="updateInput('0')">0</button>
+                    <button class="digit del" onclick="deleteLast()">&#9003;</button>
+                </div>
+            </div>
 
-    <div class="letter-keypad-container hidden" id="letterKeypad">
-        <div class="keypad-container">
-            <div class="keypad">
-                <button class="keypad-letter" onclick="updateInput('q')">q</button>
-                <button class="keypad-letter" onclick="updateInput('w')">w</button>
-                <button class="keypad-letter" onclick="updateInput('e')">e</button>
-                <button class="keypad-letter" onclick="updateInput('r')">r</button>
-                <button class="keypad-letter" onclick="updateInput('t')">t</button>
-                <button class="keypad-letter" onclick="updateInput('y')">y</button>
-                <button class="keypad-letter" onclick="updateInput('u')">u</button>
-                <button class="keypad-letter" onclick="updateInput('i')">i</button>
-                <button class="keypad-letter" onclick="updateInput('o')">o</button>
-                <button class="keypad-letter" onclick="updateInput('p')">p</button>
-                <button class="keypad-letter" onclick="updateInput('a')">a</button>
-                <button class="keypad-letter" onclick="updateInput('s')">s</button>
-                <button class="keypad-letter" onclick="updateInput('d')">d</button>
-                <button class="keypad-letter" onclick="updateInput('f')">f</button>
-                <button class="keypad-letter" onclick="updateInput('g')">g</button>
-                <button class="keypad-letter" onclick="updateInput('h')">h</button>
-                <button class="keypad-letter" onclick="updateInput('j')">j</button>
-                <button class="keypad-letter" onclick="updateInput('k')">k</button>
-                <button class="keypad-letter" onclick="updateInput('l')">l</button>
-                <button class="keypad-letter dum"></button>
-                <button class="switch-key-abc" onclick="toggleKeypad()">123</button>
-                <button class="keypad-letter" onclick="updateInput('z')">z</button>
-                <button class="keypad-letter" onclick="updateInput('x')">x</button>
-                <button class="keypad-letter" onclick="updateInput('c')">c</button>
-                <button class="keypad-letter" onclick="updateInput('v')">v</button>
-                <button class="keypad-letter" onclick="updateInput('b')">b</button>
-                <button class="keypad-letter" onclick="updateInput('n')">n</button>
-                <button class="keypad-letter" onclick="updateInput('m')">m</button>
-                <button class="keypad-letter del" onclick="deleteLast()">&#9003;</button>
+            <div class="letter-keypad-container hidden" id="letterKeypad">
+                <div class="keypad-container">
+                    <div class="keypad">
+                        <button class="keypad-letter" onclick="updateInput('q')">q</button>
+                        <button class="keypad-letter" onclick="updateInput('w')">w</button>
+                        <button class="keypad-letter" onclick="updateInput('e')">e</button>
+                        <button class="keypad-letter" onclick="updateInput('r')">r</button>
+                        <button class="keypad-letter" onclick="updateInput('t')">t</button>
+                        <button class="keypad-letter" onclick="updateInput('y')">y</button>
+                        <button class="keypad-letter" onclick="updateInput('u')">u</button>
+                        <button class="keypad-letter" onclick="updateInput('i')">i</button>
+                        <button class="keypad-letter" onclick="updateInput('o')">o</button>
+                        <button class="keypad-letter" onclick="updateInput('p')">p</button>
+                        <button class="keypad-letter" onclick="updateInput('a')">a</button>
+                        <button class="keypad-letter" onclick="updateInput('s')">s</button>
+                        <button class="keypad-letter" onclick="updateInput('d')">d</button>
+                        <button class="keypad-letter" onclick="updateInput('f')">f</button>
+                        <button class="keypad-letter" onclick="updateInput('g')">g</button>
+                        <button class="keypad-letter" onclick="updateInput('h')">h</button>
+                        <button class="keypad-letter" onclick="updateInput('j')">j</button>
+                        <button class="keypad-letter" onclick="updateInput('k')">k</button>
+                        <button class="keypad-letter" onclick="updateInput('l')">l</button>
+                        <button class="keypad-letter dum"></button>
+                        <button class="switch-key-abc" onclick="toggleKeypad()">123</button>
+                        <button class="keypad-letter" onclick="updateInput('z')">z</button>
+                        <button class="keypad-letter" onclick="updateInput('x')">x</button>
+                        <button class="keypad-letter" onclick="updateInput('c')">c</button>
+                        <button class="keypad-letter" onclick="updateInput('v')">v</button>
+                        <button class="keypad-letter" onclick="updateInput('b')">b</button>
+                        <button class="keypad-letter" onclick="updateInput('n')">n</button>
+                        <button class="keypad-letter" onclick="updateInput('m')">m</button>
+                        <button class="keypad-letter del" onclick="deleteLast()">&#9003;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forms for Bundy Selection and ID -->
+            <div class="forms-container">
+                <fieldset class="fieldset-forms">
+                    <legend style="color: #65657b; font-family: Arial, sans-serif;">Select Bundy Type:</legend>
+                    <button type="text" class="time-in">Time In</button>
+                    <button type="text" class="time-out">Time Out</button>
+                    <button type="text" class="lunch-in">Lunch In</button>
+                    <button type="text" class="lunch-out">Lunch Out</button>
+                </fieldset>
+
+                <!-- LINK FOR AUTOCOMPLETE FUNCTION -->
+                <form autocomplete="on">
+                    <div class="input-container ic1">
+                        <input id="employeeID" class="input" type="text" placeholder=" " autocomplete="on" disabled />
+                        <div class="cut"></div>
+                        <label for="employeeID" class="placeholder">Employee ID</label>
+                    </div>
+                </form>
+                <button type="text" class="submit">Submit</button>
             </div>
         </div>
+
+        <!-- Green Rounded Rectangle behind the Main Bundy Container -->
+        <div class="bundy-container-two"></div>
+
     </div>
 
-    <!-- Forms for Bundy Selection and ID -->
-    <div class="forms-container">
-        <fieldset class="fieldset-forms">
-            <legend style="color: #65657b; font-family: Arial, sans-serif;">Select Bundy Type:</legend>
-            <button type="text" class="time-in">Time In</button>
-            <button type="text" class="time-out">Time Out</button>
-            <button type="text" class="lunch-in">Lunch In</button>
-            <button type="text" class="lunch-out">Lunch Out</button>
-        </fieldset>
+    <script>
 
-            <!-- LINK FOR AUTOCOMPLETE FUNCTION -->
-            <form autocomplete="on">
-        <div class="input-container ic1">
-                    <input id="employeeID" class="input" type="text" placeholder=" " autocomplete="on" disabled />
-            <div class="cut"></div>
-            <label for="employeeID" class="placeholder">Employee ID</label>
-                </div>
-            </form>
-            <button type="text" class="submit">Submit</button>
-        </div>
+        // call in functions from 'dateAndTime.js'
+        updateTime(); 
+        setInterval(updateTime, 1000);
 
-</div>
+        // call in functions from 'keypadFunctions.js'
+        updateInput(value);
+        deleteLast(value);
+        appendToInput(value);
+        toggleKeypad();
 
-<script>
+    </script>
 
-    // Call updateTime function every second to update the time dynamically
-    setInterval(updateTime, 1000);
+    <link rel="stylesheet" href="wwwroot/layoutQueriesTwo.css">
 
-    // Initial call to display time immediately
-    updateTime();
+</body>
 
-    function updateInput(value) {
-        document.getElementById('employeeID').value += value;
-    }
+</html>
 
-    function deleteLast() {
-        var input = document.getElementById('employeeID');
-        input.value = input.value.slice(0, -1);
-    }
 
-    function appendToInput(value) {
-        document.getElementById('employeeID').value += value;
-    }
 
-    function toggleKeypad() {
-        var numpad = document.querySelector('.numpad-container');
-        var letterKeypad = document.querySelector('.letter-keypad-container');
 
-    }
+@code {
+
+}
 
