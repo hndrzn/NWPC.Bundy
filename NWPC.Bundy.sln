@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWPC.Bundy", "NWPC.Bundy\NWPC.Bundy.csproj", "{5C8B3EC5-5EC3-4C88-B322-C2BB47D8ADD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NWPC.Bundy", "NWPC.Bundy\NWPC.Bundy.csproj", "{5C8B3EC5-5EC3-4C88-B322-C2BB47D8ADD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataAccess", "dataAccess\dataAccess.csproj", "{31EF4E44-0734-4D8D-8307-2BA0A4ABA20D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5C8B3EC5-5EC3-4C88-B322-C2BB47D8ADD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C8B3EC5-5EC3-4C88-B322-C2BB47D8ADD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C8B3EC5-5EC3-4C88-B322-C2BB47D8ADD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31EF4E44-0734-4D8D-8307-2BA0A4ABA20D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EF4E44-0734-4D8D-8307-2BA0A4ABA20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EF4E44-0734-4D8D-8307-2BA0A4ABA20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EF4E44-0734-4D8D-8307-2BA0A4ABA20D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

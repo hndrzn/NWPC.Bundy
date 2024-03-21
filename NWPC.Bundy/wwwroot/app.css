@@ -149,7 +149,7 @@ h1:focus {
     z-index: inherit;
     font-family: Roboto;
     top: 0.01%;
-    left: 20.5%;
+    left: 19%;
     font-size: 40px;
     user-select: none;
 }
@@ -212,7 +212,7 @@ h1:focus {
 }
 
 .digit.del {
-    background-color: rgba(255, 0, 0, 0.5); /
+    background-color: rgba(255, 0, 0, 0.5); 
 }
 
 .digit.del:hover {
@@ -240,7 +240,7 @@ h1:focus {
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);d
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
 }
 
 .switch-key:hover {

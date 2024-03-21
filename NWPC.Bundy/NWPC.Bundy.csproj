@@ -7,9 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\scripts\trialData.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\scripts\trialData.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\Scripts\dateAndTime.js" />
     <None Include="wwwroot\Scripts\fetchData.js" />
     <None Include="wwwroot\Scripts\keypadFunctions.js" />
+    <None Include="wwwroot\scripts\trialData.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Blazor" Version="25.1.35" />
   </ItemGroup>
 
 </Project>

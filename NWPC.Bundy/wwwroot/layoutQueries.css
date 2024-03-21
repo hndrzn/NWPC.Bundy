@@ -1,7 +1,7 @@
 ﻿@media only screen and (max-width: 600px) {
     /* Adjust styles for screens smaller than 600px (typical mobile devices) */
     .nwpc-banner {
-        max-width: 80%;
+        width: 80%;
     }
 
     .top-border {

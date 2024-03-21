@@ -101,11 +101,21 @@
                 <!-- LINK FOR AUTOCOMPLETE FUNCTION -->
                 <form autocomplete="on">
                     <div class="input-container ic1">
-                        <input id="employeeID" class="input" type="text" placeholder=" " autocomplete="on" disabled />
+                        <input id="employeeID" class="input" type="text" placeholder=" " @bind="searchQuery" @oninput="UpdateAutocompleteSuggestions" autocomplete="on" disabled />
                         <div class="cut"></div>
                         <label for="employeeID" class="placeholder">Employee ID</label>
                     </div>
+                    @if (autocompleteSuggestions.Count > 0)
+                    {
+                        <ul class="autocomplete-list">
+                            @foreach (var suggestion in autocompleteSuggestions)
+                            {
+                                <li @onclick="() => SelectSuggestion(suggestion)">@suggestion</li>
+                            }
+                        </ul>
+                    }
                 </form>
+
                 <button type="text" class="submit">Submit</button>
             </div>
         </div>
@@ -129,16 +139,39 @@
 
     </script>
 
-    <link rel="stylesheet" href="wwwroot/layoutQueriesTwo.css">
-
 </body>
 
 </html>
 
-
-
-
 @code {
+    private string searchQuery = "";
+    private List<string> autocompleteSuggestions = new List<string>();
 
+    private void UpdateAutocompleteSuggestions(ChangeEventArgs e)
+    {
+        searchQuery = e.Value.ToString();
+        // Simulate asynchronous loading
+        Task.Delay(500).ContinueWith(_ =>
+        {
+            // Sample data for autocomplete suggestions
+            var sampleSuggestions = new List<string>
+                {
+                "John Doe", "Jane Smith", "Alice Johnson", "Bob Anderson", "Emily Brown"
+                };
+
+            // Filter suggestions based on search query
+            autocompleteSuggestions = sampleSuggestions
+                .Where(s => s.ToLower().Contains(searchQuery.ToLower()))
+                .ToList();
+
+            // Trigger UI update
+            InvokeAsync(StateHasChanged);
+        });
+    }
+
+    private void SelectSuggestion(string suggestion)
+    {
+        searchQuery = suggestion;
+        autocompleteSuggestions.Clear(); // Clear suggestions after selection
+    }
 }
-
